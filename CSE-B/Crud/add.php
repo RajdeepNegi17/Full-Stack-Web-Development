@@ -8,7 +8,7 @@ include('config.php');
 	<title>Input Form</title>
 </head>
 <body>
-	<form name="form" action="details.php" method="post">
+	<form name="form" action="addRecord.php" method="post">
 		ID: <input type="text" name="id"  placeholder="Enter ID"><br>
 		Name: <input type="text" name="username" placeholder="Enter Name"><br>
 		Age: <input type="text" name="age" placeholder="Enter Age"><br>

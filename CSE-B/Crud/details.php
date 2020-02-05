@@ -1,20 +1,45 @@
-<?php
-include('config.php');
-?>
+<?php include('config.php'); ?>
+
+<html>
+<head>
+<title>Records</title>
+</head>
+<body>
 
 <?php
-$sql="SELECT * FROM `users`";
-$result = mysqli_query($conn,$sql);
-
+$sql = "SELECT * FROM `users`";
+$result = mysqli_query($conn, $sql);
 
 if($result->num_rows > 0){
-	while($data = $result->fetch_assoc()){
-	$data = $result->fetch_assoc();
-	echo 'Id - '.$data['id'].'<br>';
-	echo 'Name - '.$data['name'].'<br>';
-	echo 'Age - '.$data['age'].'<br>';
-	echo 'Contact - '.$data['contact'].'<br>';
-	echo 'Email - '.$data['email'].'<br>';
-	}
-}
-?>
+?>   
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Contact</th>
+            <th>E-Mail</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php    
+    while($data = $result->fetch_assoc()){ ?>
+    <tr>
+        <td><?php echo $data['id'];?></td>
+        <td><?php echo $data['name']; ?></td>
+        <td><?php echo $data['age']; ?></td>
+        <td><?php echo $data['contact']; ?></td>
+        <td><?php echo $data['email']; ?></td>
+        <td> <a href="edit.php?id=<?php echo $data['id'];?>">Edit</a>
+        <td> <a href="delete.php?id=<?php echo $data['id'];?>">Delete</a>
+    </tr>
+    <?php } ?>
+    </tbody>
+    
+<?php } ?>
+</table>   
+</body>   
+</html>
