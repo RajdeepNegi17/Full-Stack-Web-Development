@@ -1240,9 +1240,9 @@ function parser()
     }
   }
   document.getElementById('display').innerHTML = "Max ID:-" + max_id + "<br>";
-  document.getElementById('display').innerHTML += "Max Count:-" + max_count + "<br>";
+  document.getElementById('display').innerHTML += "Max ID Count:-" + max_count + "<br>";
   document.getElementById('display').innerHTML += "All max Id :-" + max_array + "<br>";
   document.getElementById('display').innerHTML += "Min ID:-" + min_id + "<br>";
-  document.getElementById('display').innerHTML += "Min Count:-" + min_count + "<br>";
+  document.getElementById('display').innerHTML += "Min ID Count:-" + min_count + "<br>";
   document.getElementById('display').innerHTML += "All min Id :-" + min_array + "<br>";
 }
