@@ -1188,12 +1188,6 @@ var obj = [{
   },
   {
     "userId": 10,
-    "id": 199,
-    "title": "numquam repellendus a magnam",
-    "completed": true
-  },
-  {
-    "userId": 10,
     "id": 200,
     "title": "ipsam aperiam voluptates qui",
     "completed": false
